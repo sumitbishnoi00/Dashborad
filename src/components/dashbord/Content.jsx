@@ -10,7 +10,7 @@ const Content = () => {
         <section className='p-7.5 bg-light-gray'>
             <div className='max-w-398.75 w-full mx-auto flex flex-col'>
                 <div className="w-full rounded-2xl xl:h-69.25 max-xl:h-auto bg-[url('/assets/bg-image.jpg')] bg-cover bg-center flex xl:flex-row flex-col max-xl:items-center items-center justify-between">
-                    <div className='max-w-120.5 w-full max-xl:text-center flex flex-col  pl-13.75'>
+                    <div className='max-w-120.5 w-full max-xl:text-center flex flex-col  xl:pl-13.75'>
                         <p className='w-full font-normal text-[20px] leading-[100%] text-lavender-gray mb-1.5'>September 6,  2023</p>
                         <Heading heading="Welcome, Rajpal Singh!" vari="sec" />
                         <Para para="Always stay updated in your Parent portal." vari="pri" />
@@ -22,11 +22,11 @@ const Content = () => {
 
                 <Heading heading="My Students" vari="dan" />
 
-                <div className='grid 2xl:grid-cols-3 xl:grid-cols-2 grid-cols-1 gap-6 mt-7.5'>
+                <div className='grid min-[1800px]:2xl:grid-cols-3 xl:grid-cols-2  lg:grid-cols-2 grid-cols-1 gap-6 mt-7.5 justify-items-center'>
                     {CARD_DATA.map((item, index) => (
 
-                        <div key={index} className='max-w-124 w-full p-5 rounded-2xl border border-light-slate shadow-[0px_0px_30.4px_0px_#034D9024] gap-7.5 flex items-center max-sm:flex-wrap'>
-                            <img src={item.Image} className='w-56.5 h-54.5' alt="Rohan Duhan" />
+                        <div key={index} className='max-w-124 w-full p-5 rounded-2xl border border-light-slate shadow-[0px_0px_30.4px_0px_#034D9024] gap-7.5 flex xl:flex-row flex-col items-center mx-auto'>
+                            <img src={item.Image} className='sm:w-56.5 sm:h-54.5 w-40 h-40 object-cover' alt="Rohan Duhan" />
 
                             <div className='flex flex-col gap-5'>
                                 <div className='flex items-start gap-3'>

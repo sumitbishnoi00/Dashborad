@@ -4,14 +4,14 @@ import Para from '../common/Para'
 
 const Topbar = () => {
     return (
-        <section className='px-7.5 py-7 bg-white-head shadow-[0px_8px_19.1px_0px_#004B8F0D]'>
+        <section className='md:px-7.5 px-5 py-7 bg-white-head shadow-[0px_8px_19.1px_0px_#004B8F0D]'>
             <div className='max-w-398.75 w-full mx-auto flex items-center justify-between'>
 
                 <Heading heading="Dashboard" vari="pri" />
 
-                <div className='flex items-center gap-8.75'>
+                <div className='flex items-center md:gap-8.75 sm:gap-4'>
                     <span>
-                        <svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className='lg:w-14.75 lg:h-14.75 md:w-11.25 md:h-11.25 w-8.75 h-8.75' width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="29.0509" cy="29.0509" r="29.0509" fill="#E6E6F1" />
                             <g clip-path="url(#clip0_89_189)">
                                 <path d="M28.4025 42.9952C25.9006 42.9952 23.8633 40.9593 23.8633 38.456C23.8633 37.9549 24.27 37.5482 24.7711 37.5482C25.2723 37.5482 25.679 37.9549 25.679 38.456C25.679 39.9583 26.9015 41.1796 28.4025 41.1796C29.9034 41.1796 31.126 39.9583 31.126 38.456C31.126 37.9549 31.5327 37.5482 32.0339 37.5482C32.535 37.5482 32.9417 37.9549 32.9417 38.456C32.9417 40.9593 30.9046 42.9952 28.4025 42.9952Z" fill="#02066F" />
@@ -26,10 +26,10 @@ const Topbar = () => {
                             </defs>
                         </svg>
                     </span>
-                    <div className='flex gap-2.75'>
-                        <img src="/assets/Rajpal Singh.webp" className='w-[65.07px] h-[65.07px]' alt="Rajpal Singh" />
+                    <div className='flex gap-2.75 max-lg:items-center'>
+                        <img src="/assets/Rajpal Singh.webp" className='lg:w-[65.07px] md:w-[43.1px] w-[33.1px] lg:h-[65.07px] md:h-[43.1px] h-[33.1px]' alt="Rajpal Singh" />
                         <div className='flex flex-col'>
-                            <h3 className='font-semibold text-[18px] leading-[160%] text-black-head'>Rajpal Singh</h3>
+                            <h3 className='font-semibold ld:text-[18px] md:text-[16px] text-[14px] leading-[160%] text-black-head'>Rajpal Singh</h3>
                             <Para para="Parent" vari="dan" />
                         </div>
                     </div>

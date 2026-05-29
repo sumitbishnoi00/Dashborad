@@ -16,7 +16,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className={`fixed lg:static top-0 left-0 z-40 min-h-screen max-w-81.25 w-full mx-auto flex flex-col items-center  bg-white-head shadow-[8px_0px_19.1px_0px_#004B8F0D] transition-transform duration-700 ${showSidebar ? "translate-x-0 p-8" : "-translate-x-full lg:translate-x-0 px-6 py-4"} `}>
+            <div className={`fixed lg:static top-0 left-0 z-40 min-h-screen max-w-81.25 w-full mx-auto flex flex-col items-center  bg-white-head shadow-[8px_0px_19.1px_0px_#004B8F0D] transition-transform duration-700 ease-in-out ${showSidebar ? "translate-x-0 p-8" : "-translate-x-full lg:translate-x-0 px-6 py-4"} `}>
 
                 <img src="/assets/dashboard-logo.webp" className='w-full h-[64.84px]' alt="dashboard-logo" />
 
@@ -77,9 +77,9 @@ const Sidebar = () => {
 
             </div>
             <button onClick={() => setShowSidebar(!showSidebar)} className='lg:hidden relative w-6 h-6 z-500 cursor-pointer'>
-                <span className=' absolute left-1 top-13.5 w-6 h-1 bg-black rounded transition-all duration-500 '></span>
-                <span className=' absolute left-1 top-15.25 w-6 h-1 bg-black rounded transition-all duration-500 '></span>
-                <span className=' absolute left-1 top-17 w-6 h-1 bg-black rounded transition-all duration-500 '></span>
+                <span className=' absolute left-1 md:top-11.5 top-10.5 w-6 h-1 bg-black rounded transition-all duration-500 '></span>
+                <span className=' absolute left-1 md:top-13.25 top-12.25 w-6 h-1 bg-black rounded transition-all duration-500 '></span>
+                <span className=' absolute left-1 md:top-15 top-14  w-6 h-1 bg-black rounded transition-all duration-500 '></span>
             </button>
         </>
     )
