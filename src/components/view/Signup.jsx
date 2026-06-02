@@ -11,7 +11,7 @@ const Signup = () => {
     useEffect(() => {
 
         localStorage.getItem("isLogin")
-            ? navigate("/cards")
+            ? navigate("/dashbord")
             : null
     }, [])
 

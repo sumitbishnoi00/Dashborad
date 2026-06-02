@@ -19,4 +19,44 @@ export const CARD_DATA = [
         phone: "+91 8986527831"
     }
 
+];
+
+export const NOTIFICATION = [
+
+    {
+        id: 1,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 2,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 3,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 4,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 5,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 6,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    },
+    {
+        id: 7,
+        title: "Today is School Holiday",
+        subtitle: "15th August Celebration",
+    }
+
 ]
