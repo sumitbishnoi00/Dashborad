@@ -20,20 +20,20 @@ const Notification = () => {
         )
     }
     return (
-        <div className='overflow-y-auto h-full pb-28'>
-            <div className='false bg-light-gray'>
+        <div className='h-270 overflow-y-auto  pb-28  bg-light-gray dark:bg-black'>
+            <div className='false'>
                 <div className='sm:p-7.5 py-6 px-4'>
                     <div className='flex items-center justify-between'>
-                        <button onClick={handClearAll} className="flex items-center py-3.5 px-6 gap-2 border border-blue rounded-[47px] text-blue cursor-pointer">
+                        <button onClick={handClearAll} className="flex items-center py-3.5 sm:px-6 px-3 gap-2 border border-blue dark:bg-white dark:border-transparent rounded-[47px] text-blue cursor-pointer">
                             <span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="#0000F5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </span>
-                            Clear All
+                            <span className='max-sm:hidden'>Clear</span> All
                         </button>
                         <div className=' relative'>
-                            <select className="py-3.5 pl-6 pr-12.25 text-blue cursor-pointer outline-none rounded-[47px] border border-blue font-medium text-[16px] leading-[160%] appearance-none">
+                            <select className="py-3.5 sm:pl-6 pl-3 pr-12.25 text-blue cursor-pointer outline-none rounded-[47px] border border-blue dark:bg-white dark:border-transparent font-medium text-[16px] leading-[160%] appearance-none">
                                 <option value="ALL">All</option>
                                 <option value="Today">Today</option>
                                 <option value="1 Day Ago">1 Day Ago</option>
@@ -54,19 +54,19 @@ const Notification = () => {
 
                         notification.map((item) => (
 
-                            <div key={item.id} className='px-6 py-4 border-b flex flex-row items-center justify-between border-light2-gray hover:bg-gray-bg transition-all duration-300 cursor-pointer '>
+                            <div key={item.id} className='group sm:px-6 px-3 py-4 border-b flex flex-row items-center justify-between border-light2-gray hover:bg-gray-bg  transition-all duration-300 cursor-pointer '>
                                 <div>
-                                    <h2 className='font-semibold text-[18px] leading-[160%] text-black-head'>{item.title}</h2>
+                                    <h2 className='font-semibold sm:text-[18px] text-[16px] leading-[160%] text-black-head dark:text-white group-hover:text-black'>{item.title}</h2>
                                     <Para para={item.subtitle} vari="not" />
                                 </div>
 
-                                <button onClick={() => handClear(item.id)} className='flex gap-2 cursor-pointer'>
+                                <button onClick={() => handClear(item.id)} className='flex gap-2 text-black group-hover:text-black dark:text-white cursor-pointer'>
                                     <span>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="0.7" d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.7" d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                    Clear
+                                    <span className='max-sm:hidden'>Clear</span>
                                 </button>
                             </div>
                         ))

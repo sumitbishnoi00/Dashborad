@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom'
 
 const Dashbord = () => {
 
+    const [darkmode, setDarkmode] = useState(false)
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,10 +32,10 @@ const Dashbord = () => {
         <>
             <div className='max-w-480 w-full mx-auto'>
                 <div className='h-screen flex'>
-                    <Sidebar activePage={activePage} setActivePage={setActivePage} />
+                    <Sidebar activePage={activePage} setActivePage={setActivePage} darkmode={darkmode} />
                     <div className='grow flex flex-col'>
-                        <Topbar activePage={activePage} setActivePage={setActivePage} />
-                        <div className='grow h-270 overflow-y-auto'>
+                        <Topbar activePage={activePage} setActivePage={setActivePage} darkmode={darkmode} setDarkmode={setDarkmode} />
+                        <div className='grow h-200 overflow-y-auto'>
                             {
                                 activePage === "dashboard"
                                     ? <Content />

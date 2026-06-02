@@ -1,17 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Heading from '../common/Heading'
 import Para from '../common/Para'
 import { useNavigate } from 'react-router-dom'
 
-const Topbar = ({ activePage, setActivePage }) => {
+const Topbar = ({ activePage, setActivePage, darkmode, setDarkmode }) => {
+
+    // const [darkmode, setDarkmode] = useState(false)
+
+    function changecolor() {
+
+        const newMode = !darkmode;
+
+        setDarkmode(newMode);
+
+        newMode
+            ?
+            document.documentElement.classList.add("dark")
+
+            :
+            document.documentElement.classList.remove("dark")
+
+    }
 
     return (
-        <section className='md:px-7.5 px-5 py-7 bg-white-head shadow-[0px_8px_19.1px_0px_#004B8F0D]'>
+        <section className=' md:px-7.5 pl-8 sm:pr-5 pr-2 py-7 bg-white-head dark:bg-dark-blue shadow-[0px_8px_19.1px_0px_#004B8F0D] transition-all duration-500 z-50'>
             <div className='max-w-398.75 w-full mx-auto flex items-center justify-between'>
 
-                <Heading heading={activePage === "dashboard" ? "Dashboard" : "Notification/Announcement"} vari="pri" />
+                
 
-                <div className='flex items-center md:gap-8.75 sm:gap-4'>
+                {
+                    darkmode ? (
+                        <img
+                            src="/assets/dark-dashboard-logo.webp"
+                            className="w-37.75 h-[40.1px] lg:hidden"
+                            alt="dark-dashboard-logo"
+                        />
+                    ) : (
+                        <img
+                            src="/assets/dashboard-logo.webp"
+                            className="w-37.75 h-[40.1px] lg:hidden"
+                            alt="dashboard-logo"
+                        />
+                    )
+                }
+
+                <Heading heading={activePage === "dashboard" ? "Dashboard" : "Notification"} vari="pri" />
+
+                <div className='flex items-center md:gap-8.75 sm:gap-4 gap-1'>
+
+                    <button onClick={changecolor} className='md:p-3 sm:p-2 p-1 border border-solid cursor-pointer rounded-full  border-black flex items-center justify-center'>
+                        <img src={darkmode ? "/assets/sun.webp" : "/assets/moon.webp"} alt="theme icon" className='w-6 h-6' />
+                    </button>
+
                     <button onClick={() => setActivePage("notification")} className=' cursor-pointer'>
                         <span>
                             <svg className='lg:w-14.75 lg:h-14.75 md:w-11.25 md:h-11.25 w-8.75 h-8.75' width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +73,7 @@ const Topbar = ({ activePage, setActivePage }) => {
                     <div className='flex gap-2.75 max-lg:items-center'>
                         <img src="/assets/Rajpal Singh.webp" className='lg:w-[65.07px] md:w-[43.1px] w-[33.1px] lg:h-[65.07px] md:h-[43.1px] h-[33.1px]' alt="Rajpal Singh" />
                         <div className='flex flex-col'>
-                            <h3 className='font-semibold ld:text-[18px] md:text-[16px] text-[14px] leading-[160%] text-black-head'>Rajpal Singh</h3>
+                            <h3 className='font-semibold ld:text-[18px] md:text-[16px] text-[14px] leading-[160%] text-black-head dark:text-white max-md:hidden'>Rajpal Singh</h3>
                             <Para para="Parent" vari="dan" />
                         </div>
                     </div>
