@@ -96,3 +96,53 @@ export const STUDENT_RECORD = [
     }
 
 ];
+
+export const STUDENT_RECORD_2 = [
+
+    {
+        image: "/assets/Man.webp",
+        para: "Father Name:",
+        heading: "Rajpal Singh"
+    },
+    {
+        image: "/assets/Woman.webp",
+        para: "Mother Name:",
+        heading: "Sujata Kumari"
+    },
+    {
+        image: "/assets/Date.webp",
+        para: "Date of Birth:",
+        heading: "06/07/2009"
+    },
+    {
+        image: "/assets/Mobile.webp",
+        para: "Phone No:",
+        heading: "+91 8986527831"
+    },
+    {
+        image: "/assets/Email.webp",
+        para: "Email:",
+        heading: "rohanduhan@gmail.com"
+    },
+    {
+        image: "/assets/Location.webp",
+        para: "Address:",
+        heading: "6th KM Stone, O P Jindal, Hisar - 125005"
+    }
+
+];
+
+export const BUTTON = [
+
+    
+        "Math",
+        "Computer",
+        "English",
+        "Science",
+        "Hindi",
+        "S.S.T",
+        "Art",
+        "See Daily Schedule"
+    
+
+];
