@@ -14,7 +14,7 @@ const Academic = ({setActivePage}) => {
                 <div className='grid min-[1800px]:2xl:grid-cols-3 xl:grid-cols-2  lg:grid-cols-2 grid-cols-1 gap-6 mt-7.5 justify-items-center'>
                     {CARD_DATA.map((item, index) => (
 
-                        <div key={index} onClick={() => setActivePage(item.name === "Mohan" ? "mohan" : item.name === "Sohan" ? "sohan" : "rohan")} className='max-w-124 w-full p-5 rounded-2xl border border-light-slate hover:shadow-[0px_0px_30.4px_0px_#034D9024] gap-7.5 flex xl:flex-row flex-col items-center mx-auto cursor-pointer'>
+                        <div key={index} onClick={() => setActivePage(item.page)} className='max-w-124 w-full p-5 rounded-2xl border border-light-slate hover:shadow-[0px_0px_30.4px_0px_#034D9024] gap-7.5 flex xl:flex-row flex-col items-center mx-auto cursor-pointer'>
                             <img src={item.Image} className='sm:w-56.5 sm:h-54.5 w-40 h-40 object-cover' alt="Rohan Duhan" />
 
                             <div className='flex flex-col gap-5'>
