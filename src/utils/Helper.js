@@ -132,17 +132,3 @@ export const STUDENT_RECORD_2 = [
 
 ];
 
-export const BUTTON = [
-
-    
-        "Math",
-        "Computer",
-        "English",
-        "Science",
-        "Hindi",
-        "S.S.T",
-        "Art",
-        "See Daily Schedule"
-    
-
-];
