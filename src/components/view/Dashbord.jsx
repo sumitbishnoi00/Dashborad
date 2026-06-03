@@ -3,7 +3,11 @@ import Sidebar from '../dashbord/Sidebar'
 import Topbar from '../dashbord/Topbar'
 import Content from '../dashbord/Content'
 import Notification from '../dashbord/Notification'
+import Academic from '../dashbord/Academic'
 import { useNavigate } from 'react-router-dom'
+import Mohan from '../dashbord/Mohan'
+import Sohan from '../dashbord/Sohan'
+import Rohan from '../dashbord/Rohan'
 
 const Dashbord = () => {
 
@@ -39,7 +43,17 @@ const Dashbord = () => {
                             {
                                 activePage === "dashboard"
                                     ? <Content />
-                                    : <Notification />
+                                    : activePage === "academic"
+                                        ? <Academic setActivePage={setActivePage} />
+                                        : activePage === "notification"
+                                            ? <Notification />
+                                            : activePage === "mohan"
+                                                ? <Mohan />
+                                                : activePage === "sohan"
+                                                    ? <Sohan />
+                                                    : activePage === "rohan"
+                                                        ? <Rohan />
+                                                        : <Content />
                             }
                         </div>
                     </div>

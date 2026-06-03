@@ -25,7 +25,15 @@ const Sidebar = ({ activePage, setActivePage, darkmode }) => {
         <>
             <div className={`fixed lg:static top-0 left-0 z-40 min-h-screen max-w-81.25 w-full gap-5 mx-auto flex flex-col items-center  bg-white-head dark:bg-dark-blue shadow-[8px_0px_19.1px_0px_#004B8F0D] transition-transform duration-700 ease-in-out ${showSidebar ? "translate-x-0 p-8" : "-translate-x-full lg:translate-x-0 px-6 py-4"} `}>
 
-                <Heading heading={activePage === "dashboard" ? "Dashboard" : "Notification"} vari="mob" />
+                <Heading
+                    heading=
+                    {activePage === "dashboard"
+                        ? "Dashboard"
+                        : activePage === "academic"
+                            ? "Performance"
+                            : "Notification"
+                    }
+                    vari="mob" />
 
                 {
                     darkmode ? (
@@ -54,7 +62,14 @@ const Sidebar = ({ activePage, setActivePage, darkmode }) => {
                     }
                         btn="Dashboard" vari={activePage === "dashboard" ? "pri" : "sec"} onClick={() => setActivePage("dashboard")} />
 
-                    <Button icon={darkmode ? "/assets/Academic-white.webp" : "/assets/Academic-btn.webp"} btn="Academic Performance" vari="sec" />
+                    <Button icon=
+                        {activePage === "academic"
+                            ? "/assets/Academic-white.webp"
+                            : document.documentElement.classList.contains("dark")
+                                ? "/assets/Academic-white.webp"
+                                : "/assets/Academic-btn.webp"
+                        }
+                        btn="Academic Performance" vari={activePage === "academic" ? "pri" : "sec"} onClick={() => setActivePage("academic")} />
 
                     <Button icon={darkmode ? "/assets/Fee-white.webp" : "/assets/fees-btn.webp"} btn="Fee status" vari="sec" />
                 </div>

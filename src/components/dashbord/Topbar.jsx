@@ -26,7 +26,7 @@ const Topbar = ({ activePage, setActivePage, darkmode, setDarkmode }) => {
         <section className=' md:px-7.5 pl-8 sm:pr-5 pr-2 py-7 bg-white-head dark:bg-dark-blue shadow-[0px_8px_19.1px_0px_#004B8F0D] transition-all duration-500 z-50'>
             <div className='max-w-398.75 w-full mx-auto flex items-center justify-between'>
 
-                
+
 
                 {
                     darkmode ? (
@@ -44,7 +44,15 @@ const Topbar = ({ activePage, setActivePage, darkmode, setDarkmode }) => {
                     )
                 }
 
-                <Heading heading={activePage === "dashboard" ? "Dashboard" : "Notification"} vari="pri" />
+                <Heading
+                    heading={
+                        activePage === "dashboard"
+                            ? "Dashboard"
+                            : activePage === "academic"
+                                ? "Performance"
+                                : "Notification"
+                    }
+                    vari="pri" />
 
                 <div className='flex items-center md:gap-8.75 sm:gap-4 gap-1'>
 
