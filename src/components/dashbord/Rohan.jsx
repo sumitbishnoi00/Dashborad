@@ -30,7 +30,7 @@ const Rohan = () => {
 
                 <div className='flex flex-col'>
                     <div className='flex flex-row gap-3 mb-7.5'>
-                        <h3 className='font-semibold text-[28px] leading-[150%] text-black-head'>Rohan Duhan</h3>
+                        <h3 className='font-semibold text-[28px] leading-[150%] text-black-head dark:text-white'>Rohan Duhan</h3>
                         <div className='py-1.5 px-3.5 border rounded-[73px] border-dark-navy bg-light2-gray'>
                             <p className='font-normal text-[16px] leading-[160%] text-dark-navy'>Class 2nd</p>
                         </div>
@@ -44,7 +44,7 @@ const Rohan = () => {
                                 </div>
                                 <div className='flex flex-col gap-0.75'>
                                     <p className='font-normal text-[14px] leading-[160%] text-dim-gray'>{item.para}</p>
-                                    <h4 className='font-medium text-[16px] leading-[160%] text-black-head'>{item.heading}</h4>
+                                    <h4 className='font-medium text-[16px] leading-[160%] text-black-head dark:text-white'>{item.heading}</h4>
                                 </div>
                             </div>
 
@@ -63,6 +63,106 @@ const Rohan = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <div className='grid grid-cols-2 gap-7.5 max-[1870px]:grid-cols-1'>
+                <div className='flex flex-col border border-mist-blue rounded-2xl'>
+                    <div className='w-full flex flex-row items-center justify-between py-5 px-6'>
+                        <p className='font-semibold text-2xl leading-[130%] text-black-head'>1st term Exam Score</p>
+                        
+                        <div className=' relative'>
+                            <select className="py-3.5 sm:pl-6 pl-3 pr-12.25 text-blue cursor-pointer outline-none rounded-[47px] border border-blue dark:bg-white dark:border-transparent font-medium text-[16px] leading-[160%] appearance-none">
+                                <option value="ALL">1st Term Exam Result </option>
+                                <option value="Today">2nd Term Exam Result </option>
+
+                            </select>
+                            <span className=' absolute right-6 top-7 translate-y-[-50%] pointer-events-none'>
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.32218 6.29289C4.75176 5.90237 5.44824 5.90237 5.87782 6.29289L9.5 9.58579L13.1222 6.29289C13.5518 5.90237 14.2482 5.90237 14.6778 6.29289C15.1074 6.68342 15.1074 7.31658 14.6778 7.70711L10.2778 11.7071C9.84824 12.0976 9.15176 12.0976 8.72218 11.7071L4.32218 7.70711C3.89261 7.31658 3.89261 6.68342 4.32218 6.29289Z" fill="#0000F5" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className='w-full overflow-hidden max-[1870px]:overflow-x-auto'>
+                        <table className='max-w-188.25 w-full'>
+                            <tbody>
+                                <tr className='bg-dark-blue'>
+                                    <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Exam</th>
+                                    <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Total Marks</th>
+                                    <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Marks</th>
+                                    <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Status</th>
+                                    <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Grade</th>
+                                </tr>
+                                <tr className='border border-b border-very-light-gray'>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Maths</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>100</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>92</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                </tr>
+                                <tr className='border border-b border-very-light-gray'>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Hindi</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>100</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>87</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>B+</td>
+                                </tr>
+                                <tr className='border border-b border-very-light-gray'>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Hindi Grammar</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>60</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>55</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A</td>
+                                </tr>
+                                <tr className='border border-b border-very-light-gray'>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>English</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>100</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>90</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                </tr>
+                                <tr className='border border-b border-very-light-gray'>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>English Grammar</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>60</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>52</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                </tr>
+                                <tr>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Computer</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>80</td>
+                                    <td className='py-5.75 pl-6 text-black-head '>70</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
+                                    <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>B+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div className='flex flex-col gap-7.5'>
+                    <h1 className='font-semibold text-2xl leading-[130%] text-black-head'>Attendance Data</h1>
+
+                    <div className='py-10.5 px-7.5 border rounded-2xl border-mist-blue'>
+                        <img src="/assets/Attendance Data.webp" className='w-173 h-[432.32px] ' alt="Attendance Data" />
+                    </div>
+                </div>
+            </div>
+
+            <div className=' max-w-296.5 p-6 max-lg:p-5 max-md:p-4 gap-4 border border-periwinkle-gray bg-very-light-lavender rounded-2xl flex flex-col'>
+                <h1 className='font-semibold text-2xl leading-[130%] text-black-head'>Teacher Feedback:</h1>
+                <p className='font-normal text-[16px] leading-[160%] text-vary-charcoal-gray'>Teachers have consistently praised your child for their exceptional effort and active participation in class. Their enthusiasm and dedication are evident in their approach to learning and their contributions to classroom discussions. Teachers have noted several key aspects of your child’s performance:</p>
+
+                <ul className='list-disc marker:text-dark-navy pl-5 flex flex-col gap-4'>
+                    <li className='font-normal text-[16px] leading-[160%] text-black-body'>
+                        <span className='font-semibold text-[18px] leading-[160%] text-dark-navy'>Engaged Learning: </span> Your child actively engages with the material, asking insightful questions and seeking to deepen their understanding of complex concepts.
+                    </li>
+                    
+                    <li className='font-normal text-[16px] leading-[160%] text-black-body'>
+                        <span className='font-semibold text-[18px] leading-[160%] text-dark-navy'>Collaborative Spirit: </span> They work effectively with peers, demonstrating leadership and teamwork skills during group projects and collaborative assignments.
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
