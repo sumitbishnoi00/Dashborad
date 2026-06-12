@@ -3,9 +3,9 @@ import { STUDENT_RECORD, STUDENT_RECORD_2 } from '../../utils/Helper'
 
 const Rohan = () => {
     return (
-        <section className='h-500 p-7.5 bg-light-gray dark:bg-black'>
+        <section className='h-800 p-7.5 bg-light-gray dark:bg-black'>
             <div className='max-w-398.75 w-full mx-auto flex flex-col gap-7.5'>
-                <div className='grid grid-cols-4 gap-7.5'>
+                <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-7.5'>
                     {STUDENT_RECORD.map((item, index) => (
 
                         <div key={index} className='bg-white p-4.5 border rounded-xl border-mist-blue hover:shadow-[0px_4px_0px_0px_#004B8F]'>
@@ -23,72 +23,73 @@ const Rohan = () => {
                     ))}
                 </div>
 
-                <div className='flex flex-row items-center justify-center gap-9 p-7.5 border rounded-2xl border-mist-blue' >
+                <div className='flex flex-col xl:flex-row items-center justify-center gap-6 lg:gap-9 lg:p-7.5 sm:p-6 p-4 border rounded-2xl border-mist-blue' >
                     <div>
-                        <img src="/assets/Rohan Duhan.webp" className='w-121 h-124.5 object-center object-cover rounded-[10px]' alt="Rohan Duhan" />
+                        <img src="/assets/Rohan Duhan.webp" className='lg:w-121 sm:max-w-100 max-w-62.5 w-full lg:h-124.5 h-auto object-center object-cover rounded-[10px]' alt="Rohan Duhan" />
                     </div>
 
                     <div className='flex flex-col'>
-                        <div className='flex flex-row gap-3 mb-7.5'>
-                            <h3 className='font-semibold text-[28px] leading-[150%] text-black-head dark:text-white'>Rohan Duhan</h3>
-                            <div className='py-1.5 px-3.5 border rounded-[73px] border-dark-navy bg-light2-gray'>
-                                <p className='font-normal text-[16px] leading-[160%] text-dark-navy'>Class 2nd</p>
+                        <div className='flex sm:flex-row flex-col  gap-3 mb-7.5 max-xl:justify-center'>
+                            <h3 className='font-semibold sm:text-[28px] text-2xl leading-[150%] text-black-head dark:text-white'>Rohan Duhan</h3>
+                            <div className='py-1.5 px-3.5 border rounded-[73px] border-dark-navy bg-light2-gray w-fit'>
+                                <p className='font-normal sm:text-[16px] text-sm leading-[160%] text-dark-navy'>Class 2nd</p>
                             </div>
                         </div>
-                        <div className='grid grid-cols-3 gap-y-12 mb-10'>
-                            {STUDENT_RECORD_2.map((item, index) => (
+                        <div>
+                            <div className='grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-6 md:gap-y-12 mb-10'>
+                                {STUDENT_RECORD_2.map((item, index) => (
 
-                                <div key={index} className='flex flex-row items-center gap-4.5'>
-                                    <div className='w-21.5 h-21.5 rounded-[74px] bg-ghost-lavender flex items-center justify-center'>
-                                        <img src={item.image} className='w-13.75 h-13.75 object-contain' alt="record2-img" />
+                                    <div key={index} className='flex flex-row items-center gap-4.5 max-xl:justify-center max-xl:text-center'>
+                                        <div className='w-21.5 h-21.5 rounded-[74px] bg-ghost-lavender flex items-center justify-center'>
+                                            <img src={item.image} className='w-13.75 h-13.75 object-contain' alt="record2-img" />
+                                        </div>
+                                        <div className='flex flex-col gap-0.75'>
+                                            <p className='font-normal text-[14px] leading-[160%] text-dim-gray'>{item.para}</p>
+                                            <h4 className='max-w-49.75 font-medium text-[16px] leading-[160%] text-black-head dark:text-white'>{item.heading}</h4>
+                                        </div>
                                     </div>
-                                    <div className='flex flex-col gap-0.75'>
-                                        <p className='font-normal text-[14px] leading-[160%] text-dim-gray'>{item.para}</p>
-                                        <h4 className='max-w-49.75 font-medium text-[16px] leading-[160%] text-black-head dark:text-white'>{item.heading}</h4>
-                                    </div>
+
+                                ))}
+                            </div>
+
+                            <h3 className='font-medium text-[20px] leading-[160%] text-black-head mb-3.5'>Subjects:</h3>
+
+                            <div className="flex flex-row justify-between gap-2 flex-wrap">
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-[28.5px] text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    Math
                                 </div>
-
-                            ))}
-                        </div>
-
-                        <h3 className='font-medium text-[20px] leading-[160%] text-black-head mb-3.5'>Subjects:</h3>
-
-                        <div className="flex flex-row justify-between flex-wrap">
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-[28.5px] text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                Math
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-3 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                Computer
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-5.25 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                English
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-4.5 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                Science
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-7.25 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                Hindi
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-8 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                S.S.T
-                            </div>
-                            <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-[35.5px] text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                Art
-                            </div>
-                            <div className="border rounded-[73px] border-dark-navy px-3.5 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
-                                See Daily Schedule
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-3 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    Computer
+                                </div>
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-5.25 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    English
+                                </div>
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-4.5 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    Science
+                                </div>
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-7.25 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    Hindi
+                                </div>
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-8 text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    S.S.T
+                                </div>
+                                <div className="border bg-very-light-gray rounded-[73px] border-dark-navy px-[35.5px] text-[16px] font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    Art
+                                </div>
+                                <div className="border rounded-[73px] border-dark-navy px-3.5 text-[16px] dark:text-white font-normal leading-[160%] text-indigo-blue py-1.5">
+                                    See Daily Schedule
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <div className='grid grid-cols-2 gap-7.5 max-[1870px]:grid-cols-1'>
+                <div className='grid grid-cols-2 gap-7.5 max-[1400px]:grid-cols-1'>
                     <div className='flex flex-col border border-mist-blue rounded-2xl'>
-                        <div className='w-full flex flex-row items-center justify-between py-5 px-6'>
-                            <p className='font-semibold text-2xl leading-[130%] text-black-head'>1st term Exam Score</p>
+                        <div className='w-full flex flex-row flex-wrap items-center justify-between max-[1400px]:justify-start gap-4 py-5 px-6'>
+                            <p className='font-semibold text-2xl leading-[130%] text-black-head dark:text-white'>1st term Exam Score</p>
 
-                            <div className=' relative'>
+                            <div className=' relative ml-auto'>
                                 <select className="py-3.5 sm:pl-6 pl-3 pr-12.25 text-blue cursor-pointer outline-none rounded-[47px] border border-blue dark:bg-white dark:border-transparent font-medium text-[16px] leading-[160%] appearance-none">
                                     <option value="ALL">1st Term Exam Result </option>
                                     <option value="Today">2nd Term Exam Result </option>
@@ -102,7 +103,7 @@ const Rohan = () => {
                             </div>
                         </div>
 
-                        <div className='w-full overflow-hidden max-[1870px]:overflow-x-auto'>
+                        <div className='w-full overflow-hidden overflow-x-auto'>
                             <table className='max-w-188.25 w-full'>
                                 <tbody>
                                     <tr className='bg-dark-blue'>
@@ -113,46 +114,46 @@ const Rohan = () => {
                                         <th className='py-5.25 pl-6 text-left text-white text-[16px] leading-[100%] font-semibold'>Grade</th>
                                     </tr>
                                     <tr className='border border-b border-very-light-gray'>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Maths</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>100</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>92</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>Maths</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>100</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>92</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>A+</td>
                                     </tr>
                                     <tr className='border border-b border-very-light-gray'>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Hindi</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>100</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>87</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>Hindi</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>100</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>87</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>B+</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>B+</td>
                                     </tr>
                                     <tr className='border border-b border-very-light-gray'>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Hindi Grammar</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>60</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>55</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>Hindi Grammar</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>60</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>55</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>A</td>
                                     </tr>
                                     <tr className='border border-b border-very-light-gray'>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>English</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>100</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>90</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>English</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>100</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>90</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>A+</td>
                                     </tr>
                                     <tr className='border border-b border-very-light-gray'>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>English Grammar</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>60</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>52</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>English Grammar</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>60</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>52</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>A+</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>A+</td>
                                     </tr>
                                     <tr>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>Computer</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>80</td>
-                                        <td className='py-5.75 pl-6 text-black-head '>70</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>Computer</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>80</td>
+                                        <td className='py-5.75 pl-6 text-black-head dark:text-white '>70</td>
                                         <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-other-green '>Pass</td>
-                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head'>B+</td>
+                                        <td className='py-5.75 pl-6 font-normal text-[16px] leading-[160%] text-black-head dark:text-white'>B+</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -160,9 +161,9 @@ const Rohan = () => {
                     </div>
 
                     <div className='flex flex-col gap-7.5'>
-                        <h1 className='font-semibold text-2xl leading-[130%] text-black-head'>Attendance Data</h1>
+                        <h1 className='font-semibold text-2xl leading-[130%] text-black-head dark:text-white'>Attendance Data</h1>
 
-                        <div className='py-10.5 px-7.5 border rounded-2xl border-mist-blue'>
+                        <div className='py-10.5 px-7.5 border rounded-2xl dark:bg-white border-mist-blue'>
                             <img src="/assets/Attendance Data.webp" className='w-173 h-[432.32px] ' alt="Attendance Data" />
                         </div>
                     </div>
